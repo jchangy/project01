@@ -1,0 +1,1779 @@
+@charset "utf-8";
+*{margin:0; padding:0; box-sizing: border-box;}
+a{text-decoration: none; color:black;}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+#VTM{
+    width:100%;
+    height: 1080px;
+}
+
+
+/* 기본 햄버거 버튼 스타일 */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 33px; 
+    left: 30px; 
+    z-index: 1001;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #333; /* 기본 검정 */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* 햄버거 버튼이 활성화되었을 때 (X 표시) */
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #fff; /* 흰색 X */
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0; /* 가운데 선 숨김 */
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #fff; /* 흰색 X */
+}
+
+/* 모바일 메뉴 배경 */
+.phone-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* 검정 배경 */
+    z-index: 1000;
+    color: white;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.phone-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.phone-menu li {
+    margin: 20px 0;
+}
+
+.phone-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.headerTopWrap .headerTop{
+    position: relative;
+    clear:both;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    height: 90px;
+    z-index: 100;
+}
+.headerTopWrap .headerTop .logo{
+    position:absolute;
+    top:16px;
+    left:40px;  
+}
+.headerTopWrap .headerTop .logo a{
+    width: 86px;
+    height: 54px;
+    display: inline-block;
+}
+#header{
+    width: 100%;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+    position: relative;
+}
+
+
+#header #nav{
+    display: flex;
+    align-items: center;
+}
+#header #nav>li{
+    width: 170px;
+    text-align: center;
+}
+#header #nav>li>a{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color:#222;
+    padding: 40px 0;
+    display: block;
+}
+
+.headertopbar {
+    width: 100%;
+    height: 458px;
+    background: white;
+    position: absolute;
+    top:90px;
+    left:0px;
+    display: none;
+    padding: 30px 0;
+}
+.headertopbar>ul {
+    width: 80%;
+    margin: 0  auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#header #nav>li:hover .headertopbar{
+    display: block;
+}
+.headertopbar>ul>li{
+    width: 350px;
+    border-left: 1px solid #fff;
+    position: absolute;
+    left: 200px;
+}
+.headertopbar>ul>li:first-child{
+    border-left: none;
+}
+.headertopbar>ul>li>a{
+    font-size: 18px;
+}
+.headertopbar>ul>li>dl{
+    display: flex;
+    text-align: left;
+}
+.headertopbar>ul>li>dl>dt{
+    width: 300px;
+    padding-left:10px;
+}
+.headertopbar> ul>li>dl>dt>a{
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 180%;
+    text-decoration: none;
+    font-size: 18px;
+}
+.headertopbar> ul>li>dl>a{
+    text-decoration: none;
+    color: #777;
+    font-size: 0.8em;
+    line-height: 170%;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.headertopbar >ul>li> .first{
+    width:1100px;
+/*     background:yellow; */
+
+}
+.headertopbar >ul>li> .second{
+    width:1100px;
+/*     background: yellowgreen; */
+    margin-top: 50px;
+}
+
+
+
+.headertopbar > .headerSearch1{
+    width: 680px;
+    height: 100px;
+    background: #eee;
+    margin:0 auto;
+    margin-top: 300px;
+    border-radius: 10px;
+}
+.headertopbar > .headerSearch1 > .tit1 {
+    float:left;
+    background: url(../img/ico_headerSearch_01.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-right: 3px solid white;
+}
+.headertopbar > .headerSearch1 > .tit1 :after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background: #ddd;
+    width: 1px;
+    height: 13px;
+}
+.headertopbar > .headerSearch1 > .searchForm1 {
+    position: relative;
+    top: 30px;
+}
+.headertopbar > .headerSearch1 > .searchForm1 > input {
+    width: 360px;
+    height: 37px;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 20px;
+    background:#eee;
+    cursor: pointer;
+    border:none;
+}
+.headertopbar > .headerSearch1 > .searchForm1 > input:focus{
+    outline: none;
+}
+.headertopbar > .headerSearch1 > .searchForm1 > button {
+    background: url(../img/btn_headerSearch.png) no-repeat center center;
+    height: 38px;
+    width: 38px;
+    float: right;
+    border: 0;
+    text-indent: -99999px;
+    margin-right: 10px;
+}
+.headertopbar > .headerSearch1 > .searchWrap > .tit2 {
+    float:left;
+    background: url(../img/ico_headerPlace.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-right: 3px solid white;
+}
+.headerSearch1 > .searchWrap {
+    position:relative;
+}
+.headerSearch1 > .searchWrap >span {
+    display:block;
+    position:absolute;
+    top: 35px;
+    left: 190px;
+}
+
+
+.headertopbar > .headerSearch1 > .tit2 :after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background: #ddd;
+    width: 1px;
+    height: 13px;
+}
+
+.headertopbar > .headerSearch1 > .tit3 {
+    float:left;
+    background: url(../img/ico_headerCustomer.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-right: 3px solid white;
+}
+.headertopbar > .headerSearch1 > .searchForm3 p {
+    position:relative;
+    top: 35px;
+    width: 450px;
+    height: 30px;
+    float: left;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+.headerTopWrap .headerTop .headerRight{
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    min-width: 290px;
+    text-align: right;
+}
+.headerTopWrap .headerTop .headerRight>ul{
+    display: inline-block;
+
+}
+.headerTopWrap .headerTop .headerRight>ul>li{
+    float: left;
+    margin-left: 14px;
+    line-height: 50px;
+}
+.headerTopWrap .headerTop .headerRight>ul>li .btnMenu{
+    border: 1px solid #222;
+    color: #222;
+}
+.headerTopWrap .headerTop .headerRight>ul>li .btnMenu span{
+    display: block;
+    word-break: break-all;
+    font-family: "monts";
+    font-weight: 700;
+}
+.headerTopWrap .headerTop .headerRight>ul>li .btnlogin{
+    display: none;
+    border: 1px solid #222;
+    color: #222;
+}
+.headerTopWrap .headerTop .headerRight>ul>li .btnlogin span{
+    display: block;
+    word-break: break-all;
+    font-family: "monts";
+    font-weight: 700;
+}
+
+.mainBanner{
+    width: 100%;
+    height: 200px;
+    background: orangered;
+}
+.mainBanner .swiper-wrapper{
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color:purple;
+  }
+  .swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color,white);
+  }
+
+
+/*검색창+챗봇*/
+
+.mainBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1080px;
+ }
+.mainBg .headerSearchWrap {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -460px;
+    z-index: 90;
+    padding-right: 120px;
+}
+.mainBg .headerSearch.on {
+    bottom: auto;
+    position: static;
+}
+
+.mainBg .headerSearch {
+    background: #fff;
+    padding: 31px 60px;
+    border-radius: 50px;
+    overflow: hidden;
+    clear: both;
+    /* width: 400px; */
+    z-index: 55;
+    margin-top: 0;
+    display: block;
+}
+.mainBg .headerSearch .tit {
+    background: url(../img/ico_headerSearch_01.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+}
+.mainBg .headerSearch div {
+    float: left;
+}
+.mainBg .headerSearch .seachForm {
+    padding-left: 30px;
+    border-left: 1px solid #ddd;
+    width: 450px;
+}
+.mainBg .headerSearch .seachForm input {
+    width: 70%;
+    height: 37px;
+    font-family: "noto";
+    font-weight: 300;
+    font-size: 20px;
+    background: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    border : 1px solid transparent;
+}
+.mainBg .headerSearch .seachForm input:focus{
+    outline: none;
+}
+
+.mainBg .headerSearch .seachForm button {
+    background: url(../img/btn_headerSearch.png) no-repeat center center;
+    height: 38px;
+    width: 38px;
+    background-color: #fff;
+    float: right;
+    border: 0;
+    text-indent: -99999px;
+}
+
+.mainBg .headerSearchWrap .chatbot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 85px;
+    width: 108px;
+    color: #fff;
+    background: url(../img/ico_chatbot.png) no-repeat 50% 0 / 80px 80px;
+}
+
+
+
+/* .mainQuickMenuBox 퀵메뉴 박스 */
+#QuickBox{
+    height: 230px;
+    position: relative;
+    background-color: #ffbb45;;
+}
+.mainQuickMenuBox {
+    width: 100%;
+    /* height: 150px; */
+    position: absolute;
+    bottom: 0;
+    /* left: 0;
+    overflow: hidden;
+    clear: both; */
+    
+}
+.mainQuickMenuBox .mainQuickWrap {
+    /* width: 100%;
+    margin: 0 auto; */
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    top: -10px;
+    /* background: url(../img/quickservice_bar.jpg) no-repeat; */
+}
+.mainQuickMenuBox .mainQuickWrap > div {
+
+    float: left;
+    height: 150px;
+    font-size: 24px;
+    color: #694f1c;
+    font-family: "monts";
+    font-weight: 700;
+    text-align: right;
+    line-height: 30px;
+    display: table;
+}
+.mainQuickMenuBox .mainQuickWrap > div span {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 30px;
+}
+.mainQuickMenuBox ul {
+    display: table;
+}
+.mainQuickMenuBox ul {
+    background: #ffbb45;
+    overflow: hidden;
+    float: left;
+    height: 150px;
+}
+.mainQuickMenuBox ul li {
+    display: table-cell;
+    height: 130px;
+    vertical-align: middle;
+    margin-top: 8px;
+}
+.mainQuickMenuBox ul li a {
+    font-size: 16px;
+    color: #61553e;
+    font-family: "noto";
+    font-weight: 400;
+    width: 140px;
+    height: 130px;
+    display: block;
+    line-height: 20px;
+}
+.mainQuickMenuBox ul li a span {
+    padding-top: 94px;
+    text-align: center;
+    display: block;
+}
+
+.mainQuickMenuBox ul li.quickMenu01 a {
+    background: url(../img/ico_quickMenu_01.png) no-repeat center ;
+}
+.mainQuickMenuBox ul li.quickMenu01 a:hover {
+    background: url(../img/ico_quickMenu_01_on.png) no-repeat center; 
+}
+.mainQuickMenuBox ul li.quickMenu01 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width: 120px;
+    height: 135px;
+    background: grey ;
+    opacity:0.7;
+    color: white;
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+.mainQuickMenuBox ul li.quickMenu02 a {
+    background: url(../img/ico_quickMenu_02.png) no-repeat center ;
+}
+.mainQuickMenuBox ul li.quickMenu02 a:hover {
+    background: url(../img/ico_quickMenu_02_on.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu02 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width:120px;
+    height: 135px;
+    background: #75684f ;
+    opacity:0.7;
+    color:white;
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+.mainQuickMenuBox ul li.quickMenu03 a {
+    background: url(../img/ico_quickMenu_03.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu03 a:hover{
+    background: url(../img/ico_quickMenu_03_on.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu03 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width:120px;
+    height:135px;
+    background: #75684f ;
+    opacity:0.7;
+    color:white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.mainQuickMenuBox ul li.quickMenu04 a {
+    background: url(../img/ico_quickMenu_04.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu04 a:hover{
+    background: url(../img/ico_quickMenu_04_on.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu04 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width:120px;
+    height:135px;
+    background: #75684f ;
+    opacity:0.7;
+    color:white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.mainQuickMenuBox ul li.quickMenu05 a {
+    background: url(../img/ico_quickMenu_05.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu05 a:hover{
+    background: url(../img/ico_quickMenu_05_on.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu05 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width:120px;
+    height:135px;
+    background: #75684f ;
+    opacity:0.7;
+    color:white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.mainQuickMenuBox ul li.quickMenu06 a {
+    background: url(../img/ico_quickMenu_06.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu06 a:hover{
+    background: url(../img/ico_quickMenu_06_on.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu06 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width:120px;
+    height:135px;
+    background: #75684f ;
+    opacity:0.7;    
+    color:white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.mainQuickMenuBox ul li.quickMenu07 a {
+    background: url(../img/ico_quickMenu_07.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu07 a:hover{
+    background: url(../img/ico_quickMenu_07_on.png) no-repeat center;
+}
+.mainQuickMenuBox ul li.quickMenu07 a:hover span{
+    border-radius: 30px;
+    display:block;
+    width:120px;
+    height:135px;
+    background: #75684f ;
+    opacity:0.7;
+    color:white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+#content{
+    width: 100%;
+    height: auto;
+    position:relative;
+    display: block;
+}
+
+#content .mainCon1{
+    width:100%;
+    height: 1000px;
+    background: url(../img/bg_mainBg_con01.jpg) no-repeat top;
+    position: relative;
+}
+
+#content .mainCon1wrap{
+    /* max-width: 1204px; */
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    height: 100%;
+    text-align: center;
+    font-size:48px;
+}
+
+.mainCon1 .headerTit {
+    color: #aaa;
+    margin-bottom: 50px;
+    margin-top: 110px;
+    font-size: 18px;
+}
+#content .mainCon1wrap>p {
+    font-size: 30px;
+    text-align: center;  
+}
+#content .mainCon1 p strong{
+    font-weight: bold;
+}
+#content .mainCon1 .mainCon1wrap ul{
+    display:flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+#content .mainCon1 .mainCon1wrap .mainCon1mid li {
+    font-size: 28px;
+    width: 33.3333%;    
+    text-align: center;   
+    box-sizing: border-box; 
+}
+
+#content .mainCon1 .phoneMainCon1mid{
+    display: none;
+}
+#content .mainCon1 .phonemainCon1wrap{
+    display: none;
+}
+
+
+
+
+#content .mainCo2{
+    width:100%;
+    height: 1020px;
+    background: skyblue;
+}
+.mainCon2 .mainCon2Wrap {
+    width: 63%;
+    margin: 0 auto;
+   
+}
+.mainCon2 .mainCon2Wrap > div {
+    vertical-align: middle;
+    padding-top: 120px;
+    overflow: hidden;
+    clear: both;
+}
+.mainCon2 .mainCon2Wrap .mainCon2-1 {
+    background: url(../img/img_mainCon2.png) no-repeat 300px 205px;
+}
+.mainCon2 .mainCon2Wrap > div > div, .mainCon2 .mainCon2Wrap > div > ul {
+    float: left;
+    width: 50%;
+    height: 400px;
+}
+.mainCon2 .mainCon2Wrap .mainCon2-1 .mainCon2-2 {
+    padding-top: 65px;
+    font-size: 48px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.mainCon2 .mainCon2Wrap .mainCon2-1 p {
+    font-size: 18px;
+    color: #666;
+    line-height: 28px;
+    font-family: "noto";
+    font-weight: 300;
+}
+.mainCon2 .mainCon2Wrap > div > ul {
+    display:flex;
+    width: 50%;
+    height: 400px;
+}
+.mainCon2 .mainCon2Wrap > div > ul li.info01 {
+    border-left: 1px solid #ddd;
+}
+.mainCon2 .mainCon2Wrap .info01 {
+    background: url(../img/img_con2bg_01.jpg) no-repeat center ;
+}
+.mainCon2 .mainCon2Wrap .info01 span{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #222;
+    padding-top: 280px;
+}
+.mainCon2 .mainCon2Wrap .info02 {
+    background: url(../img/img_con2bg_02.jpg) no-repeat center;
+    
+}
+.mainCon2 .mainCon2Wrap .info02 span{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #222;
+    padding-top: 100px;
+}
+.mainCon2 .mainCon2Wrap .info03 {
+    background: url(../img/img_con2bg_03.jpg) no-repeat center;
+    
+}
+.mainCon2 .mainCon2Wrap .info03 span{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #222;
+    padding-top: 100px;
+}
+.mainCon2 .mainCon2Wrap .info04 {
+    background: url(../img/img_con2bg_04.jpg) no-repeat center;
+    
+}
+.mainCon2 .mainCon2Wrap .info04 span{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #222;
+    padding-top: 280px;
+}
+.mainCon2 .mainCon2Wrap .info05 {
+    background: url(../img/img_con2bg_05.jpg) no-repeat center;
+    
+}
+.mainCon2 .mainCon2Wrap .info05 span {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #222;
+    padding-top: 100px;
+}
+.mainCon2 .mainCon2Wrap .info06 {
+    background: url(../img/img_con2bg_06.jpg) no-repeat center;
+    
+}
+.mainCon2 .mainCon2Wrap .info06 span {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #222;
+    padding-top: 280px;
+}
+
+.mainCon2 .mainCon2Wrap > div > ul li {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: 400px;
+}
+.mainCon2 .mainCon2Wrap > div > ul li {
+    float: left;
+    width: 50%;
+}
+.mainCon2 .mainCon2Wrap > div > ul li a {
+    height: 100%;
+    display: block;
+}
+.mainCon2 .mainCon2Wrap > ul {
+    overflow: hidden;
+    clear: both;
+}
+.mainCon2 .mainCon2Wrap > ul li.info03 {
+    border-left: 1px solid #ddd;
+}
+.mainCon2 .mainCon2Wrap > ul li {
+    float: left;
+    width: 25%;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 400px;
+}
+
+.mainCon2 .phonemainCon2Wrap{
+    display: none;
+    padding-top: 50px;
+}
+
+.mainCon2-1 {
+    font-size: 30px;
+    text-align: center; 
+    margin-bottom: 20px;  
+}
+
+.phonemainCon2Wrap ul {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 0; 
+    margin: 0; 
+    gap: 10px; 
+}
+
+.phonemainCon2Wrap ul li {
+    width: 33.333%; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.phonemainCon2Wrap ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.phonemainCon2Wrap ul li a span {
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+.mainCon3 {
+    background: url(../images/main/bg_mainBg_con03.jpg) no-repeat center cover;
+    position: relative;
+    background-size: 100% 420px;
+    bottom: -60px;
+    width: 100%;
+}
+.mainCon3 .mainCon3Wrap {
+    max-width: 1204px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    clear: both;
+}
+.mainCon3 .mainCon3Wrap .noticeBox {
+    width: 300px;
+    float: left;
+    padding-top: 133px;
+}
+.mainCon3 .mainCon3Wrap .noticeBox div {
+    font-size: 40px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.mainCon3 .mainCon3Wrap .noticeBox p {
+    font-size: 18px;
+    color: #666;
+    font-family: "noto";
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 41px;
+}
+.mainCon3 .mainCon3Wrap .noticeBox a {
+    font-size: 16px;
+    color: #666;
+    font-family: "noto";
+    font-weight: 500;
+    background: url(../img/ico_mainCon3_link.png) no-repeat right center;
+    padding-right: 34px;
+    line-height: 24px;
+    display: inline-block;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox {
+    width: 544px;
+    padding: 133px 54px 87px 0;
+    float: left;
+    box-sizing: border-box;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox > div:first-child {
+    margin-left: 0;
+}
+
+.mainCon3 .mainCon3Wrap .noticeListBox > div {
+    width: 240px;
+    padding: 30px 35px;
+    box-sizing: border-box;
+    background: #fff;
+    float: left;
+    position: relative;
+    height: 200px;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox > div .badge {
+    color: #ffa043;
+    font-size: 17px;
+    border: 1px solid #ffa043;
+    text-align: center;
+    display: inline-block;
+    padding: 4px 5px;
+    box-sizing: border-box;
+    font-weight: 700;
+    margin-bottom: 24px;
+    min-width: 60px;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox > div .tit {
+    font-size: 17px;
+    color: #222;
+    font-weight: 700;
+    line-height: 27px;
+    height: 56px;
+    overflow: hidden;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox div.tit a {
+    text-indent: 0 !important;
+    width: auto;
+    position: relative;
+    height: auto;
+    background: none;
+    right: auto;
+    top: auto;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox > div a {
+    display: block;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox > div .date {
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    font-size: 14px;
+    color: #999;
+    font-family: "monts";
+    font-weight: 500;
+}
+.mainCon3 .mainCon3Wrap .noticeListBox > div a {
+    display: block;
+    position: absolute;
+    background: url(../img/img_con3Notice_btn.png) no-repeat;
+    width: 25px;
+    height: 25px;
+    text-indent: -99999px;
+    right: 35px;
+    top: 30px;
+}
+.mainCon3 .mainCon3Wrap .customerBox {
+    width: 360px;
+    float: left;
+    background: url(../img/img_con3bg_01.jpg) no-repeat 100%;
+    height: 420px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .tit {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+    padding-top: 50px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #61553e;
+    padding-left: 40px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .text .tel {
+    font-size: 42px;
+    color: #61553e;
+    font-family: "monts";
+    font-weight: 700;
+    display: block;
+    margin-top: 15px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .subTxt {
+    font-size: 16px;
+    color: #61553e;
+    font-family: "noto";
+    font-weight: 400;
+    padding-left: 41px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .subTxt .txt {
+    font-family: "noto";
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    padding-right: 15px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .subTxt .txt:after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background: rgba(97, 85, 62, 0.3);
+    width: 1px;
+    height: 13px;
+}
+
+.mainCon3 .mainCon3Wrap .customerBox .subTxt .txt {
+    font-family: "noto";
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    padding-right: 15px;
+}
+.mainCon3 .mainCon3Wrap .customerBox .subTxt span {
+    font-family: "monts";
+    font-weight: 500;
+    font-size: 17px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul {
+    overflow: hidden;
+    clear: both;
+    padding: 45px 36px 0 36px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li.customer01 {
+    float: left;
+    width: 92px;
+    height: 110px;
+    background: #fff4dc url(../img/ico_customer_01.png) no-repeat center 20px;
+    margin-right: 6px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li {
+    border-radius: 10px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li a {
+    width: 92px;
+    height: 110px;
+    display: block;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li a span {
+    color: #61553e;
+    text-align: center;
+    font-size: 14px;
+    font-family: "noto";
+    font-weight: 500;
+    padding-top: 80px;
+    display: block;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li.customer02 {
+    float: left;
+    width: 92px;
+    height: 110px;
+    background: #fff4dc url(../img/ico_customer_02.png) no-repeat center 20px;
+    margin-right: 6px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li {
+    border-radius: 10px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li a {
+    width: 92px;
+    height: 110px;
+    display: block;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li.customer03 {
+    float: left;
+    width: 92px;
+    height: 110px;
+    background: #fff4dc url(../img/ico_customer_03.png) no-repeat center 20px;
+}
+.mainCon3 .mainCon3Wrap .customerBox ul li {
+    border-radius: 10px;
+}
+
+.mainCon3 .phonecustomerBox {
+    display: none !important;
+    width: 100%;
+    float: left;
+    background: #e6a20f;
+    height: auto;
+}
+.mainCon3 .phonecustomerBox .tit {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 700;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center; 
+}
+.mainCon3 .phonecustomerBox .tit .material-symbols-outlined{
+    font-size: 50px;
+    color: #fff;
+}
+.mainCon3 .phonecustomerBox .text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #61553e;
+    text-align: center; 
+}
+.mainCon3 .phonecustomerBox .text .tel {
+    font-size: 42px;
+    color: #61553e;
+    font-family: "monts";
+    font-weight: 700;
+    display: block;
+    margin-top: 15px;
+    text-align: center; 
+}
+.mainCon3 .phonecustomerBox .subTxt {
+    margin: 20px;
+    font-size: 16px;
+    color: #61553e;
+    font-family: "noto";
+    font-weight: 400;
+    text-align: center; 
+}
+.mainCon3.phonecustomerBox .subTxt .txt {
+    font-family: "noto";
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    padding-right: 15px;
+    text-align: center; 
+}
+.mainCon3 .phonecustomerBox .subTxt .txt:after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background: rgba(97, 85, 62, 0.3);
+    width: 1px;
+    height: 13px;
+}
+
+.mainCon3 .phonecustomerBox .subTxt .txt {
+    font-family: "noto";
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    padding-right: 15px;
+    
+}
+.mainCon3 .phonecustomerBox .subTxt span {
+    font-family: "monts";
+    font-weight: 500;
+    font-size: 17px;
+}
+.mainCon3 .phonecustomerBox ul {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
+    clear: both;
+    padding: 30px 36px 20px 36px;
+    list-style: none; 
+    margin: 0;
+    gap: 15px;
+}
+
+.mainCon3 .phonecustomerBox ul li.customer01 {
+    width: 92px;
+    height: 110px;
+    background: #fff4dc url(../img/ico_customer_01.png) no-repeat center 20px;
+    margin-right: 6px;
+    border-radius: 10px; 
+}
+
+.mainCon3 .phonecustomerBox ul li {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 10px;
+}
+
+.mainCon3 .phonecustomerBox ul li a {
+    width: 92px;
+    height: 110px;
+    display: block;
+}
+
+.mainCon3 .phonecustomerBox ul li a span {
+    color: #61553e;
+    text-align: center;
+    font-size: 14px;
+    font-family: "noto";
+    font-weight: 500;
+    padding-top: 80px;
+    display: block;
+}
+
+.mainCon3 .phonecustomerBox ul li.customer02 {
+    float: left;
+    width: 92px;
+    height: 110px;
+    background: #fff4dc url(../img/ico_customer_02.png) no-repeat center 20px;
+    margin-right: 6px;
+}
+.mainCon3 .phonecustomerBox ul li {
+    border-radius: 10px;
+}
+.mainCon3 .phonecustomerBox ul li a {
+    width: 92px;
+    height: 110px;
+    display: block;
+}
+.mainCon3 .phonecustomerBox ul li.customer03 {
+    float: left;
+    width: 92px;
+    height: 110px;
+    background: #fff4dc url(../img/ico_customer_03.png) no-repeat center 20px;
+}
+.mainCon3 .phonecustomerBox ul li {
+    border-radius: 10px;
+}
+
+.mainCon04 {
+    margin-top: 100px;
+    /* height:670px; */
+}
+.mainCon04 > .maincon04Wrap {
+    max-width: 1204px; 
+    width: 100%;
+    margin-left: 330px;
+    overflow: hidden;
+    clear: both;
+    margin: 0 auto; 
+    /* height: 670px; */
+    
+
+}
+.mainCon04 >.maincon04Wrap >.shopBox {
+    width: 344px;
+    height: 600px;
+    padding-top: 40px;
+    border-right: 1px solid grey;
+    padding-left: 10px;
+    float:left;
+}
+.mainCon04 >.maincon04Wrap >.shopBox > .tit{
+    font-size: 48px;
+    color: #222;
+    font-weight: 700;
+    margin-top: 80px;
+}
+.mainCon04 >.maincon04Wrap >.shopBox > .shopTxt{
+    /* width: 373px; */
+    height: 277px;
+}
+.mainCon04 >.maincon04Wrap >.shopBox > .shopTxt > .subTit{
+    color: orange;
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 25px;
+}
+.mainCon04 >.maincon04Wrap >.shopBox > .shopTxt> .subTxt{
+    font-size: 18px;
+    color: #666;
+    font-weight: 300;
+    line-height: 28px;  
+    margin-top: 20px;
+}
+.mainCon04 >.maincon04Wrap >.shopBox > .shopTxt> a{
+    display:block;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #666666;
+    line-height: 30px;;
+}
+.mainCon04 >.maincon04Wrap >.shopBox > .shopTxt> img{
+    display: block;
+    padding-left: 10px;
+}
+.mainCon04 > .maincon04Wrap >.shopBoxright{
+    width: 860px;
+    height: 670px;
+
+    float:left;
+    padding:30px 30px;
+    position:relative;
+}
+
+.mainCon04 > .maincon04Wrap > .shopBoxright > .shopBox1 {
+    height: 500px;
+    float:left;
+
+}
+.mainCon04 > .maincon04Wrap > .shopBoxright .weekly{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    background: rgb(70, 61, 61);
+    color: white;
+    /* top: 350px; */
+    /* margin-left: 10px; */
+    text-align: center;
+    padding-top: 7px;
+}
+.mainCon04 > .maincon04Wrap > .shopBoxright > .shopBox2{
+    height: 500px;
+    float:right; 
+
+}
+.mainCon04 > .maincon04Wrap > .shopBoxright .weeklyTxt{
+    margin-top:40px;
+}
+.mainCon04 > .maincon04Wrap > .shopBoxright .weeklyTxt strong{
+    font-size: 28px;
+    
+}
+.mainCon04 > .maincon04Wrap > .shopBoxright .weeklyTxt p {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.mainCon05{
+    margin:0 auto;
+    width: 100%;
+    height: auto;
+    
+    background-size: cover;
+    clear: both;
+    position:relative;
+
+}
+.mainCon05 .maincon05Wrap {
+    background: #ffedc0 url(../img/bg_mainCon05_bg.png) no-repeat top;
+    background-size: contain;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 570px;
+}
+.mainCon05 .maincon05Wrap .txtBox{
+    width:100%;
+    height: auto;
+    position: relative;
+    top: 240px;
+    left: 360px;
+}
+.mainCon05 .maincon05Wrap .txtBox .tit{
+    font-size: 48px;
+    color:#61553e;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.mainCon05 .maincon05Wrap .txtBox p{
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+.mainCon05 .maincon05Wrap .btnArea{
+    display: flex;
+    width: 500px;
+    height: 60px;
+    padding-top: 10px;
+    position: relative;
+}
+.mainCon05 .maincon05Wrap .btnArea img{
+    position: absolute;
+    top: 25px;
+}
+.mainCon05 .maincon05Wrap .btnArea a{
+    position: absolute;
+    margin-left: 50px;
+    color:white;
+    font-size: 22px;
+}
+.mainCon05 .maincon05Wrap .btnArea span{
+    font-size: 16px;
+}
+.mainCon05 .maincon05Wrap .btnArea .apple{
+    width:240px;
+    height: 60px;
+    background:#666666;
+    padding-left: 10px;
+}
+.mainCon05 .maincon05Wrap .btnArea .google{
+    width:240px;
+    height: 60px;
+    background:#666666;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+footer {
+    background-color: #393939;
+    text-align: center;
+    min-width: 1204px;
+    clear: borth;
+}
+footer>div:first-child {
+    border-top: 0;
+}
+footer .footerLink {
+    padding: 79px 0 23px;
+}
+footer .footerLink ul>li>a{
+    color: white;
+}
+footer .footerLink ul>li:first-child a{
+    color: orange;
+}
+
+footer .footerLink ul {
+    overflow: hidden;
+    float: left;
+}
+footer .footerLink ul li {
+    float: left;
+    padding-right: 22px;
+    position: relative;
+}
+
+footer .footerTxt {
+    display: table;
+    padding: 24px 0 71px;
+    font-family: "noto";
+}
+footer .footerLink, .footerTxt {
+    width: 1204px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+footer > div {
+    border-top: 1px solid #545454;
+}
+footer .footerTxt div {
+    font-size: 14px;
+    color: #999;
+    text-align: left;
+    line-height: 26px;
+    padding-right: 10px;
+    margin-top: 6px;
+}
+/* footer .footerTxt div {
+    display: table;
+    vertical-align: middle;
+} */
+footer .footerlogo {
+    float:right;
+}
+
+/* header */
+@media (max-width: 800px) {
+    .header-pc {
+        display: none !important;
+    }
+    
+    .chatbot{
+        display: none !important;
+    }
+    .headerSearch{
+        display: flex !important;
+        width: 100%;
+        padding: 10px;
+        background: #f5f5f5;
+        margin: 10px auto;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 110px;   
+    }
+    .headerSearch .tit{
+        display: none;
+    }
+    .mainBg .headerSearch{
+        width: 100%;
+        max-width: 680px;
+    }
+    .mainBg .headerSearch .seachForm{
+        width: 520px;
+    }
+    #QuickBox{
+        display: none !important;
+    }
+    .mainQuickMenuBox{
+        display: none !important;
+    }
+    #content .mainCon1mid{
+        width: 100%;
+    }
+    #content .mainCon1wrap>p{
+        font-size: 20px;
+        margin-left: 50px;
+        text-align: center;
+    }
+}
+
+/* hamburger */
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .phone-menu {
+        display: none; /* 기본적으로 숨김 */
+    }
+
+    .phone-menu.active {
+        display: block; /* 활성화 시 메뉴 표시 */
+    }
+}
+/* logo */
+@media (max-width: 800px) {
+    .headerTopWrap .headerTop .logo {
+        transform: translate(-7%, 0%);
+        text-align: center; 
+        width: 100%; 
+    }
+}
+/* btnMenu */
+@media (max-width: 800px){
+    .headerTopWrap .headerTop .headerRight>ul>li .btnMenu{
+        display: none;
+    }
+    .headerTopWrap .headerTop .headerRight>ul>li .btnlogin{
+        display: block;
+        width: 60px;
+        height: 50px;
+        text-align: center;
+    }
+}
+/* mainCon1 */
+@media (max-width: 800px) {
+    #content .mainCon1wrap{
+        display: none;
+    }
+    #content .mainCon1{
+        width:100%;
+        height: 800px;
+        background: url(../img/bg_mainBg_con01.jpg) no-repeat  center;
+        background-size: cover;
+        padding: 10px;
+    }
+    #content .mainCon1 .phonemainCon1wrap{
+        display: block;
+        text-align: center; 
+    }
+    #content .mainCon1 .headerTit{
+        font-size: 35px;
+    }
+    #content .mainCon1.phonemainCon1wrap .headerTit {
+        text-align: center; 
+        font-size: 35px;
+    }
+    #content .mainCon1 .phonemainCon1wrap ul.phoneMainCon1mid {
+        display: block; 
+        padding-top: 20px;
+    }
+    #content .mainCon1 .phonemainCon1wrap ul.phoneMainCon1mid li {
+        width: auto; 
+        margin: 0 auto; 
+    }
+    #content .mainCon1 .phonemainCon1wrap ul.phoneMainCon1mid li a {
+        display: block;
+        text-align: center; 
+    }
+    #content .mainCon1 .phonemainCon1wrap ul.phoneMainCon1mid li p {
+        font-size: 25px;
+    }
+}
+/* mainCon2 */
+@media (max-width: 800px) {
+    
+    .mainCon2 .mainCon2Wrap{
+        display: none !important;
+    }
+    .mainCon2 .phonemainCon2Wrap{
+        display: block;
+    }
+}
+/* mainCon3 */
+@media (max-width: 800px) {
+    .mainCon3 .mainCon3Wrap .noticeBox> div{
+        justify-content: center;
+    }
+    .mainCon3 .mainCon3Wrap .noticeBox {
+        text-align: center;
+        margin: 0 auto;
+        float: none; 
+        width: 100%; 
+        padding-top: 20px; 
+    }
+    .mainCon3 .mainCon3Wrap .noticeListBox {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px; 
+        margin-top: -100px;
+        float: none; 
+        width: 100%; 
+    }
+    .mainCon3 .mainCon3Wrap .noticeListBox > div {
+        flex: 1 1 calc(33.33% - 20px); 
+        max-width: calc(33.33% - 20px); 
+        text-align: center;
+    }
+    .mainCon3 .mainCon3Wrap {
+        width: 100%;
+    }
+    .mainCon3 .mainCon3Wrap .customerBox{
+        display: none !important;
+    }
+    .mainCon3 .phonecustomerBox{
+        display: block !important;
+        clear: both;
+    }
+}
+/* mainCon4 */
+@media (max-width: 800px) {
+    
+    .mainCon04 > .maincon04Wrap {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+        margin: 0 auto;
+    }
+    .mainCon04 > .maincon04Wrap > .shopBox {
+        width: 90%; 
+        height: auto;
+        border-right: none;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .mainCon04 > .maincon04Wrap > .shopBoxright {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .mainCon04 > .maincon04Wrap > .shopBoxright .shopBox1,
+    .mainCon04 > .maincon04Wrap > .shopBoxright .shopBox2 {
+        float: none; 
+    }
+    .shopBox1 .weekly, .shopBox2 .weekly{
+        right: 85px;
+    }
+}
+/* mainCon5 */
+@media (max-width: 800px) {
+    .mainCon05 .maincon05Wrap .txtBox{
+        left: 110px;
+    }
+    .mainCon05 .maincon05Wrap .txtBox p{
+        margin-bottom: 20px;
+    }
+    .mainCon05 .maincon05Wrap .txtBox{
+        top: 300px
+    }
+}
+/* footer */
+@media (max-width: 800px) {
+    
+    footer {
+        min-width: auto;
+        width: 100%;
+    }
+    footer .footerLink,
+    footer .footerTxt {
+        width: 100%;
+        padding: 20px;
+    }
+    footer .footerLink ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        float: none;
+    }
+    footer .footerLink ul li {
+        width: 50%;
+        text-align: center;
+        padding: 5px 0;
+    }
+    footer .footerTxt {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footerlogo {
+        float: none;
+        order: -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer .footerTxt div {
+        text-align: center;
+        padding-right: 0;
+    }
+}

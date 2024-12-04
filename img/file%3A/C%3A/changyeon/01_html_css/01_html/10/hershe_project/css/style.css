@@ -1,0 +1,380 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+a{text-decoration: none; color: #333}
+
+body{
+    font-family: "Nanum Gothic", sans-serif; 
+}
+.container{
+    width: 1350px;
+    margin: 0 auto;
+    background: rgba(255,255,255, 0.3);
+    height: inherit;
+}
+
+#wrap{
+    width: 100%;
+}
+#header{
+    width: 100%; height: 176px;
+    
+}
+
+#mainBanner{
+    width: 100%;
+    height: 554px;
+    background: #ddd;
+}
+#content{width: 100%; background: yellowgreen;}
+
+/*사진밑 창*/
+#cnt_sub_menu{
+    width: 100%; height: 68px;
+    position: relative;
+}
+
+.left{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.right{
+    position:absolute;
+    right:0;
+    top:0;
+}
+.slide01{
+    margin-left: 54px;
+    width: 1242px;
+}
+.slide01 ul{
+    display: flex;
+    height: 68px;
+    align-items: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+}
+.slide01 ul li{
+    width: 16.666%;
+    border-right: 1px solid #000;
+    height: 68px;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    /*가운데정렬*/
+    background: #fff;
+    border-bottom: 1px solid #000;
+}
+.slide01 ul li a{}
+.slide01 ul li:hover{
+    background: #7545a8;;
+}
+.slide01 ul li:hover a{
+    color: #fff;
+}
+.slide01 ul li a{
+    font-weight: bold;
+    color:#333;
+}
+
+
+
+
+#main1{
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+
+.main1Title{
+    text-align: center;
+}
+.main1Banner{
+    width: 1336px;
+    margin: 0 auto;
+}
+.main1Banner ul{
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+.main1Banner ul li{
+    width: 167px;
+    height: 171px;
+    position: relative;
+    overflow:hidden;
+}
+.main1Banner ul li a{
+    display:block;
+}
+.main1Banner ul li a img{}
+.main1Banner ul li a span{
+    width: 167px;
+    height: 171px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(64,1,66,0.8);
+    color:#fff;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 70px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    top:100%;
+}
+.main1Banner ul li:hover a span{
+    top:0;
+}
+
+
+
+
+#main2{
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    background: paleturquoise;
+    display:flex;
+}
+.focus{
+    width:40%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.focus h2{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.focus .focusImgBox{
+    width: 437px;
+    height: 218px;
+    overflow: hidden;
+}
+.focus .focusImgBox a{
+    display: block;
+}
+.focus .focusImgBox a img{
+    transition: 0.3s;
+}
+.focus .focusImgBox a img:hover{
+    transform: scale(1.2);
+}
+.tab{
+    width:30%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.tab .tabTitle{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.tab .tabs{
+    display: flex;
+}
+.tab .tabs li{
+    margin-right: 2px;
+}
+.tab .tabs li a{
+    display: block;
+    padding: 5px 10px;
+    background: #ccc;
+    color:#333;
+    border-radius: 5px 5px 0 0;
+}
+.tab .tabs li .on{
+    background: purple;
+    color: #fff;
+}
+.tab .panels{
+    width: 100%;
+    height: 199px;
+    background: #ddd;
+}
+.tab .panels .panel{
+    position: absolute;
+}
+.tab .panels .panel p{}
+.tab .panels .panel p a{}
+.tab .panels .panel p span{}
+.subslide{
+    width:30%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.subslide h2{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.subslide ul{}
+.subslide ul li{}
+.subslide ul li a{}
+
+
+
+
+
+
+
+
+
+
+
+
+#main3{
+    width: 100%;
+    height: 930px;
+    background: pink;
+
+}
+#partner{width: 100%; height: 46px; background: #f0f;}
+#footer{
+    width: 100%;
+    height: 1000px;
+    background: #1a1a1a;
+}
+
+.top_header{
+    width: 100%; 
+    height: 88px;
+    border-bottom: 2px solid #30204d;
+}
+.top_header .container{
+    display: flex;
+    justify-content: space-between;
+}
+.top_header #gnb{display: flex;}
+.logo img{position: absolute;}
+.logo span{padding-left: 200px; padding-top: 40px; display: inline-block; font-size: 18px; font-weight: bold;}
+#search{/* display: flex; */padding-top: 26px;}
+#search input{/* display: block; */ float: left; }
+#search input:first-child{width: 250px; border: 1px solid #ddd; padding: 10px;}
+#gnb{margin-top: 10px;}
+
+nav{width: 100%; height:86px;}
+nav .container >ul{
+    display: flex;
+    justify-content: flex-end;
+    /*flex이후 오른쪽으로 정렬*/
+    align-items: center;
+    height: 86px;
+}
+nav .container >ul>li{
+    position: relative;
+}
+nav .container >ul>li>a{
+    font-size: 1em;
+    font-weight: 700;
+    padding: 33px 15px;
+    background: red;
+}
+nav .container >ul>li:last-child>a{
+    padding-right: 0;
+}
+nav .container >ul>li>a:hover{
+    color:white;
+}
+nav .container >ul>li> .drop{
+    position: absolute;
+    top: 52px;
+    display: none;
+    z-index: 10;
+    /*position 속성이 있으면 z-index설정 그래야 메뉴가 보임*/
+}
+nav .container >ul>li:hover> .drop{
+    display: block;
+    /*none, hover-block 설정하면 투뎁스창이나옴*/
+}
+nav .container >ul>li> .drop p{
+    position: absolute;
+    left: 170px;
+}
+nav .container >ul>li> .drop p strong{
+    position: absolute;
+    color: #fff;
+    top:30px;
+    left: 30px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+nav .container >ul>li> .drop p span{
+    position: absolute;
+    color: #fff;
+    top: 60px;
+    left: 30px;
+    font-weight: 700;
+    font-size: .7em;
+}
+nav .container >ul>li> .drop ul{
+    border-bottom: 3px solid #754875;
+}
+nav .container >ul>li> .drop ul li{
+    width: 170px;
+    height: 30px;
+    padding:5px 0;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    line-height: 30px;
+}
+nav .container >ul>li> .drop ul li a{
+    padding-left: 20px;
+    font-size: .8em;
+    display: block;
+    color:#666;
+    font-weight: bold;
+}
+nav .container >ul>li> .drop ul li a:hover{
+    color: #222;
+}
+nav .container >ul>li> .drop ul li a::before{
+    content:"";
+    background: url(../images/list_icon.png) no-repeat left center;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+.dropLeft{
+    left:-250px;
+}
+/* #mainBanner ul{
+    position: relative;
+}
+#mainBanner ul li{
+    position: absolute;
+    left: 100%;
+}
+#mainBanner ul li:first-child{
+    left: 0;
+}
+ */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color:purple;
+  }
+  .swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color,white);
+  }

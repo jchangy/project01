@@ -1,0 +1,466 @@
+@charset "utf-8";
+*{margin:0; padding:0; box-sizing: border-box;}
+a{text-decoration: none; color:black;}
+
+
+.headerTopWrap{}
+
+.headerTopWrap .headerTop{
+    position: relative;
+    clear:both;
+    text-align: center;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    height: 90px;
+    z-index: 100;
+    
+}
+.headerTopWrap .headerTop h1{
+    position:absolute;
+    top:16px;
+    left:40px;  
+}
+.headerTopWrap .headerTop h1 a{
+    width: 86px;
+    height: 54px;
+    display: inline-block;
+}
+#header{
+    width: 100%;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+#header h1{}
+#header #nav{
+    display: flex;
+    align-items: center;
+    /*위아래 글자를 가운데로*/
+}
+#header #nav>li{
+    width: 200px;
+    text-align: center;
+}
+#header #nav>li>a{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color:#222;
+    padding: 40px 0;
+    display: block;
+}
+
+.headertopbar {
+    width: 100%;
+    height: 458px;
+    background: white;
+    position: absolute;
+    top:90px;
+    left:0px;
+    display: none;
+    padding: 30px 0;
+    border-bottom: 1px solid grey;
+}
+.headertopbar>ul {
+    width: 1381px;
+    margin: 0   auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#header #nav>li:hover .headertopbar{
+    display: block;
+}
+.headertopbar>ul>li{
+    width: 350px;
+    border-left: 1px solid #fff;
+    position: absolute;
+    left: 200px;
+}
+.headertopbar>ul>li:first-child{
+    border-left: none;
+}
+.headertopbar>ul>li>a{
+    font-size: 18px;
+}
+.headertopbar>ul>li>dl{
+    display: flex;
+    text-align: left;
+}
+.headertopbar>ul>li>dl>dt{
+    width: 300px;
+    padding-left:10px;
+}
+.headertopbar> ul>li>dl>dt>a{
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 180%;
+    text-decoration: none;
+    font-size: 18px;
+}
+.headertopbar> ul>li>dl>a{
+    text-decoration: none;
+    color: #777;
+    font-size: 0.8em;
+    line-height: 170%;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.headertopbar >ul>li> .first{
+    width:1100px;
+/*     background:yellow; */
+
+}
+.headertopbar >ul>li> .second{
+    width:1100px;
+/*     background: yellowgreen; */
+    margin-top: 50px;
+}
+
+
+
+.headertopbar > .headerSearch1{
+    width: 680px;
+    height: 100px;
+    background: #eee;
+    margin:0 auto;
+    margin-top: 300px;
+    border-radius: 10px;
+}
+.headertopbar > .headerSearch1 > .tit1 {
+    float:left;
+    background: url(../img/ico_headerSearch_01.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-right: 3px solid white;
+}
+.headertopbar > .headerSearch1 > .tit1 :after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background: #ddd;
+    width: 1px;
+    height: 13px;
+}
+.headertopbar > .headerSearch1 > .searchForm1 {
+    position: relative;
+    top: 30px;
+}
+.headertopbar > .headerSearch1 > .searchForm1 > input {
+    width: 360px;
+    height: 37px;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 20px;
+    background:#eee;
+    cursor: pointer;
+    border:none;
+}
+.headertopbar > .headerSearch1 > .searchForm1 > input:focus{
+    outline: none;
+}
+.headertopbar > .headerSearch1 > .searchForm1 > button {
+    background: url(../img/btn_headerSearch.png) no-repeat center center;
+    height: 38px;
+    width: 38px;
+    float: right;
+    border: 0;
+    text-indent: -99999px;
+    margin-right: 10px;
+}
+.headertopbar > .headerSearch1 > .searchWrap > .tit2 {
+    float:left;
+    background: url(../img/ico_headerPlace.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-right: 3px solid white;
+}
+.headerSearch1 > .searchWrap {
+    position:relative;
+}
+.headerSearch1 > .searchWrap >span {
+    display:block;
+    position:absolute;
+    top: 35px;
+    left: 190px;
+}
+
+
+.headertopbar > .headerSearch1 > .tit2 :after {
+    content: '';
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    background: #ddd;
+    width: 1px;
+    height: 13px;
+}
+
+.headertopbar > .headerSearch1 > .tit3 {
+    float:left;
+    background: url(../img/ico_headerCustomer.png) no-repeat left center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #222;
+    padding-left: 60px;
+    line-height: 38px;
+    padding-right: 35px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-right: 3px solid white;
+}
+.headertopbar > .headerSearch1 > .searchForm3 p {
+    position:relative;
+    top: 35px;
+    width: 450px;
+    height: 30px;
+    float: left;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+.headerTopWrap .headerTop .headerRight{
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    min-width: 290px;
+    text-align: right;
+}
+.headerTopWrap .headerTop .headerRight>ul{
+    display: inline-block;
+
+}
+.headerTopWrap .headerTop .headerRight>ul>li{
+    float: left;
+    margin-left: 14px;
+    line-height: 50px;
+}
+.headerTopWrap .headerTop .headerRight>ul>li .btnMenu{
+    border: 1px solid #222;
+    color: #222;
+}
+.headerTopWrap .headerTop .headerRight>ul>li .btnMenu span{
+    display: block;
+    word-break: break-all;
+    font-family: "monts";
+    font-weight: 700;
+}
+
+
+.login-content{
+    width: 100%;
+    height:900px;
+    clear:both;
+}
+.login-content >.tit{
+    margin:0 auto;
+    width:1204px;
+    height: 200px;
+    text-align: center;
+/*     background: peru; */
+    padding-top:100px;
+}
+.login-content >.tit h3{
+    font-size: 42px;
+    
+}
+.login-content >.contents {
+    margin:0 auto;
+    width:1204px;
+    height: 360px;
+    margin-top: 50px;
+}
+.login-content .contentLeft{
+    width:600px;
+    height: 450px;
+/*     background: skyblue; */
+    float: left;
+    padding-left: 20px;
+    clear:both;
+    padding-top: 30px;
+    border-right: 1px solid grey;
+}
+.login-content .contentLeft p{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #222;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.login-content .contentLeft > div > input{
+    width:400px;
+    height:50px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.login-content .contentLeft > .securelogin{
+    width:580px;
+    height: 32px;
+    margin-top: 30px;
+    display:flex;
+}
+.login-content .contentLeft > .securelogin .securebox1{
+    width: 90px;
+    height: 32px;
+
+}
+.login-content .contentLeft > .securelogin .securebox1 label span{
+    cursor: pointer;
+    margin-left: 25px;
+    font-size: 16px;
+}
+.login-content .contentLeft > .securelogin .securebox1 >input[type="checkbox"]+label{
+    display: block;
+    width: 120px;
+    height: 20px;
+    background: url(../img/ico_checkBox.png)no-repeat;
+}
+.login-content .contentLeft > .securelogin .securebox1 >input[type='checkbox']:checked+label{
+    background:url(../img/ico_checkBox_on.png)no-repeat;
+}
+.login-content .contentLeft > .securelogin .securebox1 >input[type="checkbox"]{
+    display: none;
+}
+
+
+.login-content .contentLeft > .loginBox1 > button{
+    width:400px;
+    height: 64px;
+    background:orange;
+    border-radius: 30px;
+    border:1px solid orange;
+    margin-top: 30px;
+    color:#fff;
+    font-size: 20px;
+}
+.login-content .contentLeft > a{
+    display: block;
+    margin-top: 20px;
+    color: orange;
+    text-decoration: underline;
+}
+
+
+
+
+.login-content .contentRight{
+    width:600px;
+    height: 450px;
+/*     background: beige; */
+    float:left;
+    padding: 50px 50px;
+}
+.login-content .contentRight .RightImg {
+}
+.login-content .contentRight .RightImg .RightTit{}
+.login-content .contentRight .RightTit span{
+    display:block;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top:30px;
+}
+.login-content .contentRight .RightTit >p{
+    margin-top: 50px;
+    color:#666666;
+    font-size: 18px;
+}
+
+.login-content .contentRight .RightJoin > a{
+    display: block;
+    color: orange;
+    text-decoration: underline;
+    margin-top: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #393939;
+    text-align: center;
+    min-width: 1204px;
+}
+footer>div:first-child {
+    border-top: 0;
+}
+footer .footerLink {
+    padding: 79px 0 23px;
+}
+footer .footerLink ul>li>a{
+    color: white;
+}
+footer .footerLink ul>li:first-child a{
+    color: orange;
+}
+
+footer .footerLink ul {
+    overflow: hidden;
+    float: left;
+}
+footer .footerLink ul li {
+    float: left;
+    padding-right: 22px;
+    position: relative;
+}
+footer .footerTxt {
+    display: table;
+    padding: 24px 0 71px;
+    font-family: "noto";
+}
+footer .footerLink, .footerTxt {
+    width: 1204px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+footer > div {
+    border-top: 1px solid #545454;
+}
+footer .footerTxt div {
+    font-size: 14px;
+    color: #999;
+    text-align: left;
+    line-height: 26px;
+    padding-right: 10px;
+    margin-top: 6px;
+}
+footer .footerlogo {
+    float:right;
+}
