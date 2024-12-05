@@ -635,7 +635,7 @@ section {
     background: #aaa;
     color: #fff;
     right: 10px;
-    bottom: 8px;
+    bottom: 32px;
     padding: 5px 8px;
     cursor: pointer;
     border-radius: 5px;
@@ -791,6 +791,9 @@ footer .footerlogo {
     }
     .join-wrap .join-member ul>li>.line{
         bottom: 6px;
+    }
+    .join-wrap .join-member ul li button{
+        bottom: 8px;
     }
 }
 

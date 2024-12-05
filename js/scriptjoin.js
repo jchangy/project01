@@ -103,7 +103,6 @@ $email.addEventListener('blur', function(){
     }
 });
 
-//생년월일
 $born.addEventListener('blur' ,function(){
     if(regBorn.test($born.value)){
         $bMes.innerHTML="";
