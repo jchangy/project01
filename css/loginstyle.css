@@ -270,16 +270,14 @@ a{text-decoration: none; color:black;}
 
 .login-content{
     width: 100%;
-    height:900px;
+    height: 610px;
     clear:both;
 }
 .login-content >.tit{
+    width: 100%;
     margin:0 auto;
-    width:1204px;
-    height: 200px;
     text-align: center;
-/*     background: peru; */
-    padding-top:100px;
+    padding: 30px;
 }
 .login-content >.tit h3{
     font-size: 42px;
@@ -287,19 +285,25 @@ a{text-decoration: none; color:black;}
 }
 .login-content >.contents {
     margin:0 auto;
-    width:1204px;
+    width:100%;
     height: 360px;
     margin-top: 50px;
+    
 }
 .login-content .contentLeft{
-    width:600px;
+    width: 600px;
     height: 450px;
-/*     background: skyblue; */
     float: left;
-    padding-left: 20px;
-    clear:both;
+    clear: both;
     padding-top: 30px;
     border-right: 1px solid grey;
+    width: 50%;
+    box-sizing: border-box; 
+    padding: 20px;
+    /* 가운데 정렬을 위한 수정사항 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .login-content .contentLeft p{
     font-size: 18px;
@@ -309,7 +313,7 @@ a{text-decoration: none; color:black;}
     margin-bottom: 10px;
 }
 .login-content .contentLeft > div > input{
-    width:400px;
+    width: 350px;
     height:50px;
     border: 1px solid #ddd;
     cursor: pointer;
@@ -317,9 +321,10 @@ a{text-decoration: none; color:black;}
 }
 
 .login-content .contentLeft > .securelogin{
-    width:580px;
+    width:395px;
     height: 32px;
     margin-top: 30px;
+    margin-left: 50px;
     display:flex;
 }
 .login-content .contentLeft > .securelogin .securebox1{
@@ -347,8 +352,8 @@ a{text-decoration: none; color:black;}
 
 
 .login-content .contentLeft > .loginBox1 > button{
-    width:400px;
-    height: 64px;
+    width: 310px;
+    height: 50px;
     background:orange;
     border-radius: 30px;
     border:1px solid orange;
@@ -358,20 +363,20 @@ a{text-decoration: none; color:black;}
 }
 .login-content .contentLeft > a{
     display: block;
-    margin-top: 20px;
+    margin-top: 43px;
     color: orange;
     text-decoration: underline;
 }
 
 
-
-
 .login-content .contentRight{
     width:600px;
     height: 450px;
-/*     background: beige; */
     float:left;
     padding: 50px 50px;
+    width: 50%; 
+    box-sizing: border-box;
+    text-align: center; 
 }
 .login-content .contentRight .RightImg {
 }
@@ -381,6 +386,7 @@ a{text-decoration: none; color:black;}
     font-size: 32px;
     font-weight: 700;
     margin-top:30px;
+    line-height: 1.2;
 }
 .login-content .contentRight .RightTit >p{
     margin-top: 50px;
@@ -392,7 +398,7 @@ a{text-decoration: none; color:black;}
     display: block;
     color: orange;
     text-decoration: underline;
-    margin-top: 120px;
+    margin-top: 25px;
 }
 
 
@@ -463,4 +469,105 @@ footer .footerTxt div {
 }
 footer .footerlogo {
     float:right;
+}
+
+
+@media (max-width: 800px) {
+    #header {
+        display: none;
+    }
+    .headerRight{
+        display: none;
+    }
+    .headerTopWrap .headerTop .logo{
+        transform: translate(-7%, 0%);
+        text-align: center; 
+        width: 100%; 
+    }
+
+}
+
+@media (max-width: 800px) {
+    .login-content .contents {
+        display: flex; /* Flexbox 사용 */
+        flex-direction: row; /* 가로로 나열 */
+        flex-wrap: wrap; /* 화면 크기 부족 시 줄바꿈 */
+        justify-content: space-between; /* 양쪽 정렬 */
+    }
+    .login-content .contentLeft{
+        width: 50%; 
+        max-width: 500px; 
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px; 
+        box-sizing: border-box; 
+    }
+    .contentLeft p {
+        text-align: left;
+        margin-bottom: 10px; 
+    }
+    .contentLeft input {
+        width: 90%;
+        max-width: 400px; 
+        margin: 10px auto; 
+        display: block; 
+    }
+    .contentLeft .loginBox1 button {
+        width: 90%;
+        max-width: 400px; 
+    }
+    .contentLeft a {
+        display: block; 
+        margin-top: 10px; 
+    }
+    .login-content .contentLeft > .loginBox1 > button{
+        width: 300px;
+        margin: 10px auto; 
+        display: block; 
+    }
+    .login-content .contentLeft > .securelogin{
+        margin-left: 45px;
+    }
+    .login-content .contentLeft >.securelogin img {
+        margin-left: 15px; 
+    }
+}
+
+/* footer */
+@media (max-width: 800px) {
+    
+    footer {
+        min-width: auto;
+        width: 100%;
+    }
+    footer .footerLink,
+    footer .footerTxt {
+        width: 100%;
+        padding: 20px;
+    }
+    footer .footerLink ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        float: none;
+    }
+    footer .footerLink ul li {
+        width: 50%;
+        text-align: center;
+        padding: 5px 0;
+    }
+    footer .footerTxt {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footerlogo {
+        float: none;
+        order: -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer .footerTxt div {
+        text-align: center;
+        padding-right: 0;
+    }
 }
