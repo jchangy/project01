@@ -1,4 +1,5 @@
 
+/*슬라이드*/
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -17,7 +18,7 @@ var swiper = new Swiper(".mySwiper", {
     loop:true,
 });
  
-/*시작버튼 자바스크립*/
+/*양옆 버튼*/
 let sp=0;
 $('.btn-pause').click(function(){
     if(sp==0){
@@ -32,7 +33,7 @@ $('.btn-pause').click(function(){
 });
 
 
-
+/*햄버거메뉴*/
 const hamburger = document.getElementById('hamburger');
 const phoneMenu = document.getElementById('phoneMenu');
 

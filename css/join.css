@@ -602,18 +602,18 @@ a{text-decoration: none; color:black;}
 
 
 section {
-    width: 100%; /* 섹션의 전체 너비 */
-    height: 1400px; /* 섹션의 높이 설정 */
-    display: flex; /* 플렉스박스를 사용하여 정렬 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    margin: 0 auto; /* 중앙 정렬 유지 */
-    background-color: #f8f9fa; /* 배경색 (선택 사항) */
+    width: 100%; 
+    height: 1220px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0 auto; 
+    background-color: #f8f9fa; 
 }
 .join-wrap {
     padding: 20px;
-    background: #fff; /* 흰색 배경 */
-    border-radius: 10px; /* 모서리를 둥글게 */
+    background: #fff; 
+    border-radius: 10px; 
     
 }
 .join-wrap h3{text-align: center; font-size: 42px; padding-top: 10px;}
@@ -780,12 +780,14 @@ footer .footerlogo {
     .join-wrap .join-member .buttonBtn {
         flex-direction: column;
         align-items: center; 
+        width: 340px;
     }
 
     .join-wrap .join-member .buttonBtn .re-write,
     .join-wrap .join-member .buttonBtn .join-button {
-        max-width: 300px; 
-        margin-bottom: 10px; 
+        max-width: 165px;
+        margin-bottom: 10px;
+        height: 50px;
     }
     .join-wrap .join-member ul>li>.line{
         bottom: 6px;

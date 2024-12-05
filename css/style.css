@@ -16,8 +16,6 @@ html, body {
     height: 1080px;
 }
 
-
-/* 기본 햄버거 버튼 스타일 */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -34,27 +32,25 @@ html, body {
 .hamburger .line {
     width: 100%;
     height: 3px;
-    background-color: #333; /* 기본 검정 */
+    background-color: #333;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-/* 햄버거 버튼이 활성화되었을 때 (X 표시) */
 .hamburger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-    background-color: #fff; /* 흰색 X */
+    background-color: #fff; 
 }
 
 .hamburger.active .line:nth-child(2) {
-    opacity: 0; /* 가운데 선 숨김 */
+    opacity: 0;
 }
 
 .hamburger.active .line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-    background-color: #fff; /* 흰색 X */
+    background-color: #fff; 
 }
 
-/* 모바일 메뉴 배경 */
 .phone-menu {
     display: none;
     position: fixed;
@@ -62,7 +58,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* 검정 배경 */
+    background-color: black; 
     z-index: 1000;
     color: white;
     padding-top: 100px;
@@ -109,7 +105,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* 줄바꿈 허용 */
+    flex-wrap: wrap;
     position: relative;
 }
 
@@ -190,16 +186,11 @@ html, body {
 }
 .headertopbar >ul>li> .first{
     width:1100px;
-/*     background:yellow; */
-
 }
 .headertopbar >ul>li> .second{
     width:1100px;
-/*     background: yellowgreen; */
     margin-top: 50px;
 }
-
-
 
 .headertopbar > .headerSearch1{
     width: 680px;
@@ -314,12 +305,6 @@ html, body {
     font-size: 15px;
 }
 
-
-
-
-
-
-
 .headerTopWrap .headerTop .headerRight{
     position: absolute;
     right: 10px;
@@ -363,10 +348,6 @@ html, body {
     height: 200px;
     background: orangered;
 }
-.mainBanner .swiper-wrapper{
-
-}
-
 .swiper {
     width: 100%;
     height: 100%;
@@ -396,8 +377,8 @@ html, body {
   }
 
 
-/*검색창+챗봇*/
 
+/*검색창+챗봇*/
 .mainBg {
     position: absolute;
     top: 0;
@@ -424,7 +405,6 @@ html, body {
     border-radius: 50px;
     overflow: hidden;
     clear: both;
-    /* width: 400px; */
     z-index: 55;
     margin-top: 0;
     display: block;
@@ -492,25 +472,17 @@ html, body {
 }
 .mainQuickMenuBox {
     width: 100%;
-    /* height: 150px; */
     position: absolute;
     bottom: 0;
-    /* left: 0;
-    overflow: hidden;
-    clear: both; */
-    
+    height: 148px;
 }
 .mainQuickMenuBox .mainQuickWrap {
-    /* width: 100%;
-    margin: 0 auto; */
     position: relative;
     left: 50%;
     margin-left: -500px;
     top: -10px;
-    /* background: url(../img/quickservice_bar.jpg) no-repeat; */
 }
 .mainQuickMenuBox .mainQuickWrap > div {
-
     float: left;
     height: 150px;
     font-size: 24px;
@@ -568,11 +540,13 @@ html, body {
     display:block;
     width: 120px;
     height: 135px;
-    background: grey ;
+    background: #75684f ;
     opacity:0.7;
     color: white;
     margin-left:10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 
 .mainQuickMenuBox ul li.quickMenu02 a {
@@ -591,6 +565,8 @@ html, body {
     color:white;
     margin-left:10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 
 .mainQuickMenuBox ul li.quickMenu03 a {
@@ -609,6 +585,8 @@ html, body {
     color:white;
     margin-left: 10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 
 .mainQuickMenuBox ul li.quickMenu04 a {
@@ -627,6 +605,8 @@ html, body {
     color:white;
     margin-left: 10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 
 .mainQuickMenuBox ul li.quickMenu05 a {
@@ -645,6 +625,8 @@ html, body {
     color:white;
     margin-left: 10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 
 .mainQuickMenuBox ul li.quickMenu06 a {
@@ -663,6 +645,8 @@ html, body {
     color:white;
     margin-left: 10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 .mainQuickMenuBox ul li.quickMenu07 a {
     background: url(../img/ico_quickMenu_07.png) no-repeat center;
@@ -680,6 +664,8 @@ html, body {
     color:white;
     margin-left: 10px;
     margin-top: 10px;
+    position:absolute;
+    top: 10px;
 }
 
 
@@ -932,7 +918,6 @@ html, body {
 .mainCon3 {
     background: url(../images/main/bg_mainBg_con03.jpg) no-repeat center cover;
     position: relative;
-    background-size: 100% 420px;
     bottom: -60px;
     width: 100%;
 }
@@ -969,9 +954,7 @@ html, body {
     font-family: "noto";
     font-weight: 500;
     background: url(../img/ico_mainCon3_link.png) no-repeat right center;
-    padding-right: 34px;
     line-height: 24px;
-    display: inline-block;
 }
 .mainCon3 .mainCon3Wrap .noticeListBox {
     width: 544px;
@@ -1304,7 +1287,6 @@ html, body {
 
 .mainCon04 {
     margin-top: 100px;
-    /* height:670px; */
 }
 .mainCon04 > .maincon04Wrap {
     max-width: 1204px; 
@@ -1312,10 +1294,7 @@ html, body {
     margin-left: 330px;
     overflow: hidden;
     clear: both;
-    margin: 0 auto; 
-    /* height: 670px; */
-    
-
+    margin: 0 auto;
 }
 .mainCon04 >.maincon04Wrap >.shopBox {
     width: 344px;
@@ -1332,7 +1311,6 @@ html, body {
     margin-top: 80px;
 }
 .mainCon04 >.maincon04Wrap >.shopBox > .shopTxt{
-    /* width: 373px; */
     height: 277px;
 }
 .mainCon04 >.maincon04Wrap >.shopBox > .shopTxt > .subTit{
@@ -1362,7 +1340,6 @@ html, body {
 .mainCon04 > .maincon04Wrap >.shopBoxright{
     width: 860px;
     height: 670px;
-
     float:left;
     padding:30px 30px;
     position:relative;
@@ -1371,7 +1348,6 @@ html, body {
 .mainCon04 > .maincon04Wrap > .shopBoxright > .shopBox1 {
     height: 500px;
     float:left;
-
 }
 .mainCon04 > .maincon04Wrap > .shopBoxright .weekly{
     position: absolute;
@@ -1379,15 +1355,12 @@ html, body {
     height: 30px;
     background: rgb(70, 61, 61);
     color: white;
-    /* top: 350px; */
-    /* margin-left: 10px; */
     text-align: center;
     padding-top: 7px;
 }
 .mainCon04 > .maincon04Wrap > .shopBoxright > .shopBox2{
     height: 500px;
     float:right; 
-
 }
 .mainCon04 > .maincon04Wrap > .shopBoxright .weeklyTxt{
     margin-top:40px;
@@ -1474,7 +1447,6 @@ footer {
     background-color: #393939;
     text-align: center;
     min-width: 1204px;
-    clear: borth;
 }
 footer>div:first-child {
     border-top: 0;
@@ -1488,7 +1460,6 @@ footer .footerLink ul>li>a{
 footer .footerLink ul>li:first-child a{
     color: orange;
 }
-
 footer .footerLink ul {
     overflow: hidden;
     float: left;
@@ -1498,7 +1469,6 @@ footer .footerLink ul li {
     padding-right: 22px;
     position: relative;
 }
-
 footer .footerTxt {
     display: table;
     padding: 24px 0 71px;
@@ -1520,10 +1490,6 @@ footer .footerTxt div {
     padding-right: 10px;
     margin-top: 6px;
 }
-/* footer .footerTxt div {
-    display: table;
-    vertical-align: middle;
-} */
 footer .footerlogo {
     float:right;
 }
@@ -1533,7 +1499,6 @@ footer .footerlogo {
     .header-pc {
         display: none !important;
     }
-    
     .chatbot{
         display: none !important;
     }
@@ -1578,14 +1543,15 @@ footer .footerlogo {
 @media (max-width: 800px) {
     .hamburger {
         display: flex;
+        position: absolute;
     }
 
     .phone-menu {
-        display: none; /* 기본적으로 숨김 */
+        display: none;
     }
 
     .phone-menu.active {
-        display: block; /* 활성화 시 메뉴 표시 */
+        display: block;
     }
 }
 /* logo */
@@ -1654,11 +1620,15 @@ footer .footerlogo {
         display: none !important;
     }
     .mainCon2 .phonemainCon2Wrap{
-        display: block;
+        display: none;
     }
+    
 }
 /* mainCon3 */
 @media (max-width: 800px) {
+    .mainCon3{
+        bottom: 0px;
+    }
     .mainCon3 .mainCon3Wrap .noticeBox> div{
         justify-content: center;
     }
@@ -1673,18 +1643,21 @@ footer .footerlogo {
         display: flex;
         flex-wrap: wrap; 
         justify-content: center; 
-        gap: 10px; 
+        gap: 25px; 
         margin-top: -100px;
         float: none; 
         width: 100%; 
     }
     .mainCon3 .mainCon3Wrap .noticeListBox > div {
-        flex: 1 1 calc(33.33% - 20px); 
-        max-width: calc(33.33% - 20px); 
+        flex: 1 1 calc(30%); 
+        max-width: calc(30%); 
         text-align: center;
+        left: 35px;
     }
     .mainCon3 .mainCon3Wrap {
         width: 100%;
+        background-color: rgba(238, 193, 110, 0.788);
+        padding-top: 25px;
     }
     .mainCon3 .mainCon3Wrap .customerBox{
         display: none !important;
@@ -1741,7 +1714,6 @@ footer .footerlogo {
 }
 /* footer */
 @media (max-width: 800px) {
-    
     footer {
         min-width: auto;
         width: 100%;
